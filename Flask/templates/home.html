@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Human Development Index</title>
+    <!-- Your dark blue dashboard CSS styling goes here -->
+</head>
+<body>
+    <h1>Human Development Index</h1>
+    <div class="dashboard-container">
+        <!-- Form submits data to the /predict backend route -->
+        <form class="form" action="/predict" method="post">
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select the name of the country</option>
+                <option value="1">Afghanistan</option>
+                <!-- Other country options... -->
+            </select>
+            <input class="form-input" type="text" name="life_expectancy" placeholder="Enter life expectancy value..." required>
+            <input class="form-input" type="text" name="mean_years_of_schooling" placeholder="Enter mean years of schooling..." required>
+            <input class="form-input" type="text" name="gni_per_capita" placeholder="Enter Gross National Income (GNI) per capita..." required>
+            <input class="form-input" type="text" name="expected_years_of_schooling" placeholder="Enter expected years of schooling..." required>
+            
+            <button type="submit" class="btn-predict">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
